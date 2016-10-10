@@ -11,6 +11,7 @@
 <body>
 <!-- added the div of class wrapper for the ryanfait.com sticky footer -->
 <div class="wrapper">
+	<div class="center-the-content full-header-border">
 	<!-- The header goes at the top of the page.-->
 	<header>
 		<div id="my-name">Jonathon Nagatani
@@ -21,9 +22,8 @@
 			<a class="nav-link" href="portfolio.html" title="Jonathon's porfolio">Portfolio</a> |
 			<a class="nav-link" href="contact.html" title="contact Jonathon">Contact</a>
 		</nav>
-
-
-		<!-- use an unordered list with a float to create a horizontal menu, instead of creating a nav:
+		<!--
+		use an unordered list with a float to create a horizontal menu, instead of creating a nav:
 
 		<ul id="page-links-menu">
 
@@ -33,15 +33,18 @@
 		</ul>
 		-->
 	</header>
+	</div> <!-- /full-header-border AND /center-the-content -->
 	
-	<!-- need to have "style="clear:both;" at the beginning of this section; it specifies floating elements are not allowed to float on the left or right of this element and clears the floats*-->
-
-	<!-- Use a section, which "is the same thing as a div," but to help improve google search rankings so google better understands the different components of the webpage-->
 	<!-- Use a class when you will be using the css style elements more than once -->
+	<!-- Use an id when you plan to use the css style elements only once ie for this one specific instance of this element only-->
+	<div class="center-the-content">
+	<!-- need to have "style="clear:both;" at the beginning of this section; it specifies floating elements are not allowed to float on the left or right of this element and clears the floats (from above ie the header!-->
+	<div class="full-background-image">
 	<div class="middle-section" style="clear:both">
 		<!-- a div defines something which takes up its own distinct vertical area. Usually an automatic <br> follows each div element, unless changed within the css -->
-		<!-- Use an id when you plan to use the css style elements only once ie for this one specific instance of this element only-->
-		<section class="main-content" id="about-me">
+
+		<!-- Use a section, which "is the same thing as a div," but to help improve google search rankings so google better understands the different components of the webpage-->
+		<section class="main-content" id="about-me"> <!-- added the id about-me so the nav link at the page top will go to this about-me id section -->
 			<h2 title="about jonathon nagatani">About Jonathon</h2>
 			<!-- <hr> adds a line. You can also define a percentage width eg <hr width="70%"> Don't use a closing tag or it may screw stuff up!-->
 			<hr>
@@ -58,14 +61,14 @@
 			<a href="https://www.linkedin.com/in/jonathonnagatani" target="_blank" title="jonathon on linkedin"><img id="logo-link-linkedinsmaller" src="./images/logo linkedin.png"></a>
 			<a href="http://stackoverflow.com/users/6828743/happytoo?tab=profile" target="_blank" title="jonathon on stack overflow"><img class="logo-link" src="./images/logo stack overflow.png"></a>
 		</div>
-		<!-- put these here for the ryan fait sticky footer-->
-		<br style="clear:both" />
-		<!-- need this div class="push" for the ryanfait.com sticky footer-->
-		<div class="push"></div>
-	</div>
-<!-- end tag for the wrapper class -->
-</div>
+	<br style="clear:both"/>
+	</div> <!-- /middle-section -->
+	</div> <!-- /full-background-image -->
+	</div> <!-- /center-the-content -->
 
+	<!-- need this div class="push" for the ryanfait.com sticky footer-->
+	<div class="push"></div>
+</div><!--/wrapper -->
 	<!-- The footer goes at the bottom of the page-->
 	<footer>
 		<div id="main-footer">Copyright (c) 2016 Jonathon Nagatani. &lthappy face here&gt. All rights reserved.</div>
